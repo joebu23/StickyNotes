@@ -23,6 +23,7 @@ namespace StickyNotes.DAL
 
         public virtual DbSet<Team> Team { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Note> Note { get; set; }
     }
 }
 

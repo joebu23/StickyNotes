@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using StickyNotes.DAL;
 using StickyNotes.Models;
 using StickyNotes.Providers;
 using StickyNotes.Results;
@@ -331,6 +332,17 @@ namespace StickyNotes.Controllers
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+
+            // this needs to change
+            var db = new StickyNotesContext();
+            var userTeam = new User
+            {
+                EmailAddress = model.Email,
+                TeamId = model.TeamId
+            };
+
+            db.User.Add(userTeam);
+            db.SaveChanges();
 
             if (!result.Succeeded)
             {
