@@ -90,9 +90,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StickyNotes\StickyNotes.csproj">
+    <ProjectReference Include="..\StickyNotes\StickyNotes-Services Test.csproj">
       <Project>{73fcc3a5-27f5-4cbf-bb1e-3472452a9929}</Project>
-      <Name>StickyNotes</Name>
+      <Name>StickyNotes-Services Test</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
