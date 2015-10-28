@@ -90,7 +90,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StickyNotes\StickyNotes-Services Test.csproj">
+    <ProjectReference Include="..\StickyNotes Test\StickyNotes Test.csproj">
       <Project>{73fcc3a5-27f5-4cbf-bb1e-3472452a9929}</Project>
       <Name>StickyNotes-Services Test</Name>
     </ProjectReference>

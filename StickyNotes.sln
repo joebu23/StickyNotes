@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotes-Services Test", "StickyNotes\StickyNotes-Services Test.csproj", "{73FCC3A5-27F5-4CBF-BB1E-3472452A9929}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotes Test", "StickyNotes Test\StickyNotes Test.csproj", "{73FCC3A5-27F5-4CBF-BB1E-3472452A9929}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotesDesktop Test", "StickyNotesDesktop\StickyNotesDesktop Test.csproj", "{8CA2F974-A98E-4B92-A561-F92C8FC0B480}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickyNotesDesktop Test", "StickyNotesDesktop Test\StickyNotesDesktop Test.csproj", "{8CA2F974-A98E-4B92-A561-F92C8FC0B480}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
