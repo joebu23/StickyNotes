@@ -79,6 +79,16 @@ namespace StickyNotes_Admin.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(50, ErrorMessage = "The {0} is required.", MinimumLength = 2)]
+        [Display(Name = "Your Name")]
+        public string UserName { get; set; }
+
+        [Required]
+        [StringLength(50, ErrorMessage = "The {0} is required.", MinimumLength = 2)]
+        [Display(Name = "Team Name")]
+        public string TeamName { get; set; }
     }
 
     public class ResetPasswordViewModel

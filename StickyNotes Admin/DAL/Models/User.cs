@@ -14,6 +14,8 @@ namespace StickyNotes_Admin.DAL.Models
 
         public String EmailAddress { get; set; }
 
+        public String UserName { get; set; }
+
         [ForeignKey("TeamId")]
         public virtual Team Team { get; set; }
 

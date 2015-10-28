@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using StickyNotes_Admin.DAL;
+using StickyNotes_Admin.DAL.Models;
 using StickyNotes_Admin.Models;
 
 namespace StickyNotes_Admin.Controllers
@@ -156,7 +159,25 @@ namespace StickyNotes_Admin.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
+                    var db = new StickyNotesContext();
+                    var newTeam = new Team
+                    {
+                        Name = model.TeamName,
+                        AdminId = user.Id
+                    };
+                    var newUser = new User
+                    {
+                        EmailAddress = model.Email,
+                        UserName = model.UserName,
+                        Team = newTeam,
+                        TeamId = newTeam.Id
+                    };
+
+                    db.User.Add(newUser);
+                    db.Team.Add(newTeam);
+                    db.SaveChanges();
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

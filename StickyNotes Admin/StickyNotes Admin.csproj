@@ -182,6 +182,10 @@
     <Compile Include="Migrations\201510281957217_Initial.Designer.cs">
       <DependentUpon>201510281957217_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510282011178_TeamName.cs" />
+    <Compile Include="Migrations\201510282011178_TeamName.Designer.cs">
+      <DependentUpon>201510282011178_TeamName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -259,6 +263,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201510281957217_Initial.resx">
       <DependentUpon>201510281957217_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510282011178_TeamName.resx">
+      <DependentUpon>201510282011178_TeamName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
